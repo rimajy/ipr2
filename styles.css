@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.shopping-list, .summary {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.shopping-list {
+    width: calc(60% - 20px);
+
+}
+
+.summary {
+    width: calc(35% - 20px);
+
+}
+
+@media (max-width: 500px) {
+    .shopping-list, .summary {
+        width: 100%;
+    }
+}
+/*------------------------------------------------------------*/
+.shopping-list input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.shopping-list input[type="text1"] {
+    width: calc(10%);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.add-button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    left: 56%;
+    margin-top: -36px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.item-name {
+    flex: 1;
+}
+
+.item-name.crossed {
+    text-decoration: line-through;
+}
+/*------------------------------------------------------------*/
+
+.button {
+    background-color: #f0f0f0;
+    border: 1px solid #dfdfdf;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+}
+
+.increase {
+    width: 27px;
+    border-radius: 50%;
+    background-color: #28a745;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 45%;
+    border: 1px solid #dfdfdf;
+    padding: 5px 8px;
+    cursor: pointer;
+    position: absolute;
+    left: 25.4%;
+    margin-top: -15px;
+}
+
+.decrease {
+    width: 27px;
+    border-radius: 50%;
+    background-color: #dc3545;
+    color: white;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dfdfdf;
+    padding: 5px 10px;
+    cursor: pointer;
+    position: absolute;
+    left: 19.4%;
+    margin-top: -15px;
+}
+
+.item-count {
+    padding:  10px;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    position: absolute;
+    left: 22.4%;
+
+}
+
+/*------------------------------------------------------------*/
+.status-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.status-button.not-bought {
+    background-color: #e6e6e6;
+    color: #6c757d;
+    position: absolute;
+    right: 40%;
+}
+
+
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 40%;
+    margin-top: 3px;
+}
+.status-button.bought {
+    background-color: #dfdfdf;
+    color: #6c757d;
+    position: absolute;
+    right: 41.5%;
+}
+/*------------------------------------------------------------*/
+.summary h3 {
+    margin-top: 0;
+}
+
+.remaining-item, .purchased-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.remaining-item .count, .purchased-item .count {
+    background-color: #ffa500;
+    border-radius: 5px;
+    padding: 2px 5px;
+    color: white;
+}
+/*------------------------------------------------------------*/
+.badge {
+    position: fixed;
+    bottom: -100px;
+    left: 100px;
+    padding: 10px 40px 30px;
+    color: white;
+    background-color: #9900ff;
+    border-radius: 8px;
+    transition: all .5s ease-in-out;
+}
+
+.badge:hover{
+    bottom: -2%;
+    background-color: #d192ff;
+}
+
+.badge p {
+    margin: 5px 0;
+}
+
+.badge__title {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.badge__created-by {
+    font-size: 18px;
+    padding: 15px 0 0 0;
+}
+.badge__name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+@media print {
+    .badge__title{
+        display: none;
+    }
+    .badge {
+        color: black;
+        background-color: transparent;
+        padding: 10px;
+        border: 1px solid black;
+        bottom: -1%;
+    }
+    .badge__created-by {
+        font-size: 15px;
+        padding: 0;
+    }
+    .badge__name {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+/*------------------------------------------------------------*/
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: #9900ff;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 12%; /* Позиціонування підказки над кнопкою */
+    left: 50%;
+    margin-left: -75px; /* Використовується половина ширини для центрування підказки */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+

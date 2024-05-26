@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список Покупок</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="shopping-list">
+        <input type="text" placeholder="Назва товару">
+        <div class="tooltip">
+            <button class="add-button">Додати</button>
+            <span class="tooltiptext">Додати новий товар</span>
+        </div>
+        <div class="item">
+            <span class="item-name crossed">Помідори</span>
+            <span class="item-count">2</span>
+            <div class="tooltip">
+                <button class="status-button not-bought">Не куплено</button>
+                <span class="tooltiptext">Статус: не куплено</span>
+            </div>
+        </div>
+        <div class="item">
+            <span class="item-name">Печиво</span>
+            <div class="tooltip">
+                <button class="decrease">-</button>
+                <span class="tooltiptext">Зменшити кількість</span>
+            </div>
+            <span class="item-count">2</span>
+            <div class="tooltip">
+                <button class="increase">+</button>
+                <span class="tooltiptext">Збільшити кількість</span>
+            </div>
+            <div class="tooltip">
+                <button class="status-button bought">Куплено</button>
+                <span class="tooltiptext">Статус: куплено</span>
+            </div>
+            <div class="tooltip">
+                <button class="delete-button">x</button>
+                <span class="tooltiptext">Видалити товар</span>
+            </div>
+        </div>
+        <div class="item">
+            <input type="text1" value="Сир">
+            <div class="tooltip">
+                <button class="decrease">-</button>
+                <span class="tooltiptext">Зменшити кількість</span>
+            </div>
+            <span class="item-count">1</span>
+            <div class="tooltip">
+                <button class="increase">+</button>
+                <span class="tooltiptext">Збільшити кількість</span>
+            </div>
+            <div class="tooltip">
+                <button class="status-button bought">Куплено</button>
+                <span class="tooltiptext">Статус: куплено</span>
+            </div>
+            <div class="tooltip">
+                <button class="delete-button">x</button>
+                <span class="tooltiptext">Видалити товар</span>
+            </div>
+        </div>
+    </div>
+    <div class="summary">
+        <div class="remaining">
+            <h3>Залишилося</h3>
+            <div class="remaining-item">Печиво <span class="count">2</span></div>
+            <div class="remaining-item">Сир <span class="count">1</span></div>
+        </div>
+        <div class="purchased">
+            <h3>Куплено</h3>
+            <div class="purchased-item">Помідори <span class="count">2</span></div>
+        </div>
+    </div>
+    <div class="badge" id="badge">BuyList</div>
+</div>
+<div class="badge">
+    <p class="badge__title">
+        BuyList
+    </p>
+    <p class="badge__created-by">
+        Зробив:
+    </p>
+    <p class="badge__name">
+        Тарасенко Тимофій
+    </p>
+</div>
+
+
+</body>
+</html>

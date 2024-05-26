@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shopping-list, .summary {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.shopping-list {
+    width: 60%;
+}
+
+.summary {
+    width: 35%;
+}
+
+.shopping-list input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.shopping-list input[type="text1"] {
+    width: calc(10%);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.item-name {
+    flex: 1;
+}
+
+.item-name.crossed {
+    text-decoration: line-through;
+}
+
+.count-controls {
+    display: flex;
+    align-items: center;
+    margin-left: calc(30%);
+
+}
+
+.count-controls button {
+    background-color: #f0f0f0;
+    border: 1px solid #dfdfdf;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.count-controls .increase {
+    width: 27px;
+    border-radius: 50%;
+    background-color: #28a745;
+    color: white;
+    margin-left: 5px;
+}
+
+.count-controls .decrease {
+    width: 27px;
+    border-radius: 50%;
+    background-color: #dc3545;
+    color: white;
+    margin-right: 5px;
+
+}
+
+.item-count {
+    padding:  10px;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+
+}
+
+.status-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.status-button.not-bought {
+    background-color: #e6e6e6;
+    color: #6c757d;
+    margin-left: 502px;
+}
+
+.status-button.bought {
+    background-color: #dfdfdf;
+    color: #6c757d;
+    margin-left: 456px;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.summary h3 {
+    margin-top: 0;
+}
+
+.remaining-item, .purchased-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.remaining-item .count, .purchased-item .count {
+    background-color: #ffa500;
+    border-radius: 5px;
+    padding: 2px 5px;
+    color: white;
+}
+.badge {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    background-color: #6a0dad; /* Темно фіолетовий колір */
+    color: white;
+    border-radius: 10px 10px 0 0; /* Скруглені верхні кути */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.badge:hover {
+    transform: translateY(-10px); /* Плавне виїжджання вгору */
+    background-color: #8a5ec2; /* Зміна кольору при наведенні */
+}
+
+/* Анімація для з’явлення підказки */
+.tooltip {
+    position: absolute;
+    background-color: #6a0dad;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+}
+
+.tooltip.show {
+    opacity: 1;
+}
